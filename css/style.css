@@ -6232,3 +6232,42 @@ footer{
     min-width:160px !important;
   }
 }
+
+
+/* 추가 수정: Award 제목 줄바꿈 표시 보정 */
+#board-award .award-card h3 br{
+  display:block;
+  content:"";
+}
+
+
+/* =========================================================================
+   추가 수정: 모바일 PI 소개 페이지 영어/한글 괄호 설명 줄바꿈 정리
+   ========================================================================= */
+
+/* 데스크톱에서는 기존처럼 영어와 괄호 설명이 한 줄로 자연스럽게 표시 */
+#professor-page .pi-mobile-en,
+#professor-page .pi-mobile-space,
+#professor-page .pi-mobile-ko{
+  display:inline !important;
+}
+
+/* 모바일에서는 영어 표현과 괄호 안 한글 설명을 분리해 자동 줄바꿈 끊김 방지 */
+@media (max-width:900px){
+  #professor-page .pi-mobile-en,
+  #professor-page .pi-mobile-ko{
+    display:block !important;
+  }
+
+  #professor-page .pi-mobile-space{
+    display:none !important;
+  }
+
+  #professor-page .pi-mobile-en{
+    margin-bottom:2px !important;
+  }
+
+  #professor-page .pi-mobile-ko{
+    line-height:1.5 !important;
+  }
+}
